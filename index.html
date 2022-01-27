@@ -14,10 +14,10 @@
 <body>
     <div class="overlay"></div>
 
-    <div class="container">
+    <form class="container">
         <div class="title">
             <h1>Calcul du ticket d'achat</h1>
-            <p>Choisir les articles qui composent votre commande</p>
+            <p id="display">Choisir les articles qui composent votre commande</p>
         </div>
 
         <div class="column">
@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="input">
-                    <input type="number" name="Banane-input" value="0" id="Banane-input">
+                    <input type="number" name="Banane-input" value="0" id="Banane-input" min="0" step="1>
                     <label for="Banane-input">Unité</label>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="input">
-                    <input type="number" name="Ananas-input" value="0" id="Ananas-input">
+                    <input type="number" name="Ananas-input" value="0" id="Ananas-input" min="0" step="1>
                     <label for="Ananas-input">Unité</label>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="input">
-                    <input type="number" name="Banane-input" value="0" id="Yaourt-input">
+                    <input type="number" name="Banane-input" value="0" id="Yaourt-input" min="0" step="1>
                     <label for="Yaourt-input">Unité</label>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="input">
-                    <input type="number" name="Pistache-input" value="0" id="Pistache-input">
+                    <input type="number" name="Pistache-input" value="0" id="Pistache-input" min="0" step="1>
                     <label for="Pistache-input">Grammes</label>
                 </div>
             </div>
@@ -76,26 +76,32 @@
                 </div>
 
                 <div class="input">
-                    <input type="number" name="Noix-input" value="0" id="Noix-input" id="Noix-input">
+                    <input type="number" name="Noix-input" value="0" id="Noix-input" id="Noix-input" min="0" step="1>
                     <label for="Noix-input">Grammes</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="check">
-                    <input type="checkbox" name="Cacahuètes" value="0.03">
+                    <input type="checkbox" name="Cacahuètes" value="0.03" >
                     <label for="Cacahuètes">Cacahuètes</label>
                 </div>
 
                 <div class="input">
-                    <input type="number" name="Cacahuètes-input" value="0" id="Cacahuètes-input">
+                    <input type="number" name="Cacahuètes-input" value="0" id="Cacahuètes-input" min="0" step="1>
                     <label for="Cacahuètes-input">Grammes</label>
                 </div>
+
             </div>
 
-            <button class="row button">CALCULER</button>
+           
+            
         </div>
 
+        <div class="buttons">
+            <button class="row button" type="button" id="calculer">CALCULER</button>
+            <button class="row button" type="button" id="clear">EFFACER</button>
+        </div>
 
         <div class="output">
             <p>Le Prix Total de la Commande:</p>
@@ -106,12 +112,17 @@
                 <p>Dirhams</p>
             </div>
         </div>
-
-    </div>
+        
+    </form>
 
     <audio src="SRC/error.wav" id="error"></audio>
-    <audio src="SRC/click.wav" id="click"></audio>
     <audio src="SRC/success.wav" id="success"></audio>
+    <audio src="SRC/negative.wav" id="negative"></audio>
+    <audio src="SRC/click-tone.wav" id="click-tone"></audio>
+    <audio src="SRC/techs-elect.wav" id="tech-select"></audio>
+
+    
+
 </body>
 
 <script type="text/javascript" src="JS/SCRIPT.JS"></script>
